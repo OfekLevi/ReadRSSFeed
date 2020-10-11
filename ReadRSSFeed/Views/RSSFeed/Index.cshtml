@@ -1,0 +1,57 @@
+﻿@{
+    ViewBag.Title = "Index";
+}
+
+<link href="~/Styles/StyleSheet1.css" rel="stylesheet" />
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+@using (Html.BeginForm())
+{
+    <script>
+        $(document).ready(function () {
+
+            //alert($(document).html);
+            //$("#tblFeed tr").each($(this).show())
+
+            $("#1").delay(100).fadeIn();
+            $("#2").delay(200).fadeIn();
+            $("#3").delay(300).fadeIn();
+            $("#4").delay(400).fadeIn();
+            $("#5").delay(500).fadeIn();
+            $("#6").delay(600).fadeIn();
+            $("#7").delay(700).fadeIn();
+            $("#8").delay(800).fadeIn();
+            $("#9").delay(900).fadeIn();
+            $("#10").delay(1000).fadeIn();
+        });
+    </script>
+
+    <input type="submit" id="button" value="Click Here To Generate" class="MyButton" />
+}
+
+<table id="tblFeed">
+    <thead>
+        <tr>
+            <th id="1" class="TextH">Image</th>
+            <th id="1" class="TextH">Title</th>
+            <th id="1" class="TextH">Publish Date</th>
+        </tr>
+    </thead>
+    <tbody>
+        @if (ViewBag.RSSFeed != null)
+        {
+            int i = 1;
+
+            foreach (var item in ViewBag.RSSFeed)
+            {
+                <tr id="@i" class="Tables">
+                    <td><a target="_blank" href="@item.Url"><img class="Images" src="@item.Image" /></a></td>
+                    <td class="Text"><a target="_blank" href="@item.Url">@item.Title</a></td>
+                    <td class="Text">@item.Published</td>
+                </tr>
+
+                i++;
+            }
+        }
+    </tbody>
+</table>
