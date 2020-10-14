@@ -11,5 +11,6 @@ namespace ReadRSSFeed.Models
         public string Url { get; set; }
         public string Published { get; set; }        
         public string Image { get; set; }
+        public string Category { get; set; }
     }
 }
