@@ -2,6 +2,8 @@
     background-image: url("https://images8.alphacoders.com/539/thumb-1920-539384.jpg");    
  background-repeat: no-repeat;
  background-attachment:fixed;
+ font-family:Arial;
+ 
 }
 .MyButton {
     background-color: cornflowerblue;

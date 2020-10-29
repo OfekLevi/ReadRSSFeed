@@ -5,7 +5,7 @@ using System.Web;
 
 namespace ReadRSSFeed.Models
 {
-    public class RSSFeed
+    public class RSSFeed//item
     {
         public string Title { get; set; }
         public string Url { get; set; }
