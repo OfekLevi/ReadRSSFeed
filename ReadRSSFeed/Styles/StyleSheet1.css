@@ -5,7 +5,8 @@
  font-family:Arial;
  
 }
-.MyButton {
+
+.MyButton-Rss {
     background-color: cornflowerblue;
     color: white;
     position: center;
@@ -13,7 +14,7 @@
     height: 50px;
     font-size: 20px;
     margin-left: 400px;
-    margin-top: 30px;    
+    margin-top: 30px;
 }
 
 .Text {
@@ -22,6 +23,7 @@
     padding-left: 10px;
     
 }
+
 .TextH {
     color: white;
 }
@@ -29,12 +31,103 @@
 .Images {
     border: 3px solid transparent;
 }
+
 .Tables:hover
 {
     background-color:lightblue;
 }
+
 .TableRow{
     display:none;
+}
+
+.fields-row {
+    color: white;
+    position: center;
+    width: 100%;
+    height: 50px;
+    font-size: 20px;
+    margin-left: 400px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.fields {
+    list-style: none;
+    margin-top: 100px;
+    padding-right:80%;
+}
+
+.MyButton-Login {
+    background-color: cornflowerblue;
+    color: white;
+    position: center;
+    border-radius: 5px;
+    height: 25px;
+    width: 180PX;
+    font-size: 15px;
+    margin-left: 137px;
+    margin-top: 30px;
+}
+
+.Titles {
+    font-size: 40px;
+    color: white;
+    position: center;
+    margin-left: 440px;
+}
+
+.input1 {
+    margin-left: 30px;
+}
+
+.input2 {
+    margin-left: 44px;
+}
+
+.FP {
+    color: cornflowerblue;
+    position: center;
+    width: 100%;
+    height: 50px;
+    font-size: 15px;
+    margin-left: 137px;
+}
+
+.blu {
+    color: cornflowerblue;
+}
+
+.White {
+    color: white;
+}
+
+.SU {
+    color: cornflowerblue;
+    position: center;
+    width: 100%;
+    height: 50px;
+    font-size: 15px;
+    margin-left: 400px;
+    margin-top: 20px;
+}
+
+.wrapper {
+    margin-left: 0px;
+    margin-top: 150px;
+    
+}
+
+.error {
+    color: red;
+    position: center;
+    height: 50px;
+    margin-left: 400px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+.DisguisedLink {
+    text-decoration: none;
 }
 
 

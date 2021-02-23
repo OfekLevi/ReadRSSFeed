@@ -5,11 +5,8 @@ using System.Web;
 
 namespace ReadRSSFeed.Models
 {
-    public class BaseUser
+    public class Lane_Selector_Lookup:BaseModel
     {
-        public string NickName { get; set; }
-        public string Password { get; set; }
-
-
+        public string Lane { get; set; }
     }
 }

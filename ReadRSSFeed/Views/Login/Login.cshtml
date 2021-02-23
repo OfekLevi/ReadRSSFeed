@@ -1,52 +1,68 @@
 ﻿
 @{
-    Layout = null;
+    Layout = "~/Views/MasterPage/MasterPage.cshtml";
 }
 
 <!DOCTYPE html>
-<link href="~/Styles/StyleSheet2.css" rel="stylesheet" />
+
+
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
-    <title>Login</title>
+    <title class="Titles">Login</title>
 </head>
 
 <body>
-    
+
     <div class="wrapper">
-        <h1 class="Title">Login</h1>
-        <form action="~/Login/CheckLogin" method="post">
-            
-            <ul class="fields">
-                <li >
+        <h1 class="Titles">Login</h1>
+        <form action="~/Login/CheckLogin_New" method="post">
+
+            <table class="Tables-Pages">
+
+                <tr class="Table-row">
                     @if (ViewBag.Error != null)
                     {
-                        <span class="error">Name or password is not correct</span>
+                        <span class="error">Name or password are not correct </span>
                     }
-                    else if (ViewBag.Trick != null)
+                    @if (ViewBag.NotApproved != null)
                     {
-                        <span class="error">This is not good to do some tricks</span>
-
+                        <span class="error"> you have yet to be approved</span>
                     }
-                </li>
-                <li class="fields-row">
-                    <label>User Name</label>
-                    <input type="text" name="NickName" class="input1"/>
-                </li>
-                <li class="fields-row">
-                    <label>Password</label>
-                    <input type="password" name="Password" class="input2" />
-                    <p class="FP">Forgot Password</p>
-                </li>
-               
-                <li class="fields-row">
-                    <button class="MyButton" type="submit">Login</button>
-                </li>
-                <li class="SU">
-                    <p class="White">Don't have an account? </p> <p class="blu">Sign up</p>
-                </li>
-            </ul>
-        </form> 
+                    @*else if (ViewBag.Trick != null)
+        {
+            <span class="error">This is not good to do some tricks</span>
+
+        }*@
+                </tr>
+                <tr class="Table-row">
+                    <td class="Text-SignUp">User Name</td>
+                    <td class="input"><input type="text" name="Email" /></td>
+                </tr>
+                <tr class="Table-row">
+                    <td class="Text-SignUp">Password</td>
+                    <td class="input"><input type="password" name="password" /></td>
+                </tr>
+                <tr class="Table-row">
+                    <td class="Text-SignUp"></td>
+                    <td class="input"><p class="FP">Forgot Password</p></td>
+                </tr>
+                <tr class="Table-row">
+                    <td class="Text-SignUp"></td>
+                    <td class="input"><button class="MyButton-Submit" type="submit">Login</button></td>
+                </tr>
+                <tr class="">
+                    <td class="Text-SignUp"><p class="White">Don't have an account? </p></td>                    
+                </tr>
+                <tr class="">
+                    <td class="Text-SignUp"><a href="https://localhost:44323/SignUp/SignUp" class="FP">Sign up</a><td>                    
+                </tr>
+
+
+
+            </table>
+
+        </form>
     </div>
 </body>
 </html>

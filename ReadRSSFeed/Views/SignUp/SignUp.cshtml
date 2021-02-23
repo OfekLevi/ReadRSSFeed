@@ -1,0 +1,141 @@
+﻿@using ReadRSSFeed.Models
+@model User
+
+
+@{
+    Layout = "~/Views/MasterPage/MasterPage.cshtml";
+    User user = Model;
+    string buttonText = "Update";
+    string action = "UpdateUserData";
+
+    if(user == null)
+    {
+        user = new User();
+        user.UserFill();
+        buttonText = "Submit";
+        action = "InsertUserData";
+        //action= "";
+    }
+
+    TempData["UserId"] = user.Id;
+
+
+
+}
+
+<!DOCTYPE html>
+
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+
+    <title>SignUp</title>
+</head>
+
+<body>
+
+    <div class="wrapper">
+
+        @if(Session["UserId"] != null)
+        {
+            <h1 class="Titles">Update</h1>
+        }
+        else
+        {
+            <h1 class="Titles">Sign Up</h1>
+        }
+
+        <form method="post" action="~/SignUp/@action">
+
+
+            <table class="Tables-Pages">
+
+                <tr class="Table-row">
+
+                    <td class="Text-SignUp">First Name</td>
+                    <td class="input"><input type="text" name="First_Name" value="@user.First_Name" /></td>
+
+
+                </tr>
+                <tr class="Table-row">
+
+                    <td class="Text-SignUp">Last Name</td>
+                    <td class="input"><input type="text" name="Last_Name" value="@user.Last_Name" /></td>
+
+
+                </tr>
+                <tr class="Table-row">
+
+                    <td class="Text-SignUp">Email Address</td>
+                    <td class="input"><input type="email" name="Email" value="@user.Email" /></td>
+
+
+                </tr>
+                <tr class="Table-row">
+
+
+                    <td class="Text-SignUp">Birth Year</td>
+                    <td class="input"><input type="text" name="Birth_Year" value="@user.Birth_Year" /></td>
+
+
+                </tr>
+                <tr class="Table-row">
+
+
+
+                    <td class="Text-SignUp">Password</td>
+                    <td class="input"><input type="password" name="Password" value="@user.Password" /></td>
+
+
+                </tr>
+                <tr class="Table-row">
+
+
+                    <td class="Text-SignUp">Rank</td>
+                    <td class="input"><input type="text" name="Rank" value="@user.Rank" /></td>
+
+
+                </tr>
+                <tr class="Table-row">
+
+
+                    <td class="Text-SignUp">Lane</td>
+                    <td class="input"><input type="text" name="Lane" value="@user.Lane" /></td>
+
+
+                </tr>
+                <tr class="Table-row">
+
+
+                    <td class="Text-SignUp">Summoner Name</td>
+                    <td class="input"><input type="text" name="Summoner_Name" value="@user.Summoner_Name" /></td>
+
+
+                </tr>
+                <tr class="Table-row">
+
+
+
+                    <td class="Text-SignUp">Current Main</td>
+                    <td class="input"><input type="text" name="CurrentMain" /></td>
+
+
+                </tr>
+                <tr class="Table-row">
+                    <td class="Text-SignUp"></td>
+                    <td class="input"><button class="MyButton-Submit">@buttonText</button></td>
+                    @if (user != null && user.Admin == false && user.Approved == true)
+                    {
+                        <td></td>
+                        <td class="input"><input type="button" class="MyButton-Submit" onclick="window.location='@Url.Action("DeleteUser", "SignUp")'" value="Delete" /></td>
+                    }
+
+                </tr>
+
+
+            </table>
+        </form>
+    </div>
+</body>
+</html>

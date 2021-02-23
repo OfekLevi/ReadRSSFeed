@@ -121,24 +121,37 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="BLL\LoginBLL.cs" />
+    <Compile Include="BLL\UserBLL.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\RSSFeedController.cs" />
+    <Compile Include="Controllers\SignUpController.cs" />
+    <Compile Include="Controllers\WaitingForApprovalController.cs" />
+    <Compile Include="DAL\BaseDb.cs" />
     <Compile Include="DAL\RSSDAL.cs" />
+    <Compile Include="DAL\UserDb.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\BaseModel.cs" />
     <Compile Include="Models\BaseUser.cs" />
     <Compile Include="Models\Category.cs" />
+    <Compile Include="Models\Lane-Selector_Lookup.cs" />
     <Compile Include="Models\RSSFeed.cs" />
+    <Compile Include="Models\User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Data\V5.mdb" />
     <Content Include="App_Data\XMLFile1.xml" />
+    <Content Include="App_Data\XMLFile2.xml" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\IMGS\Icon.jpg" />
+    <Content Include="Content\IMGS\v5.png" />
+    <Content Include="Content\IMGS\Yasou.png" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -156,8 +169,8 @@
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Styles\Css.css" />
     <Content Include="Styles\StyleSheet1.css" />
-    <Content Include="Styles\StyleSheet2.css" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -174,6 +187,9 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\RSSFeed\Index.cshtml" />
     <Content Include="Views\Login\Login.cshtml" />
+    <Content Include="Views\MasterPage\MasterPage.cshtml" />
+    <Content Include="Views\SignUp\SignUp.cshtml" />
+    <Content Include="Views\WaitingForApproval\WaitingForApproval.cshtml" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

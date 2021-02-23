@@ -1,12 +1,14 @@
 ﻿@{
     ViewBag.Title = "Index";
-   // if( Session["IsAuthenticated"] == false)
-   //     return RedirectToAction("login", "login");
+    Layout = "~/Views/MasterPage/MasterPage.cshtml";
+    // if( Session["UserId"] == false)
+    //     return RedirectToAction("login", "login");
+
 }
 
-@*<link href="~/Styles/StyleSheet1.css" rel="stylesheet" />*@
+
 <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-<link href="~/Styles/StyleSheet1.css" rel="stylesheet" />
+
 
 @using (Html.BeginForm())
 {
@@ -44,7 +46,7 @@
     </script>
 
     <br />
-    <select name="CategoryTerm" class="MyButton">
+    <select name="CategoryTerm" class="MyButton-Rss">
         <option value="Choose Category">Choose Category</option>
         <option value="All Posts">All Posts</option>
         <option value="League of Legends">League of Legends</option>
@@ -52,12 +54,12 @@
         <option value="WPW">WPW</option>
     </select>
 
-    <input type="submit" id="button" value="Click Here To Generate" class="MyButton" />
+    <input type="submit" id="button" value="Click Here To Generate" class="MyButton-Rss" />
     <br />
 }
 <br />
 <br />
-<table id="tblFeed">
+<table id="tblFeed" >
     <thead>
         <tr>
             <th id="h" class="TextH">Image</th>
@@ -69,11 +71,14 @@
         @if (ViewBag.RSSFeed != null)
         {
             int i = 1;
+            
 
             foreach (var item in ViewBag.RSSFeed)
             {
-                <tr id="@i" style="display:none">
-                    <td><a target="_blank" href="@item.Url"><img class="Images" src="@item.Image" /></a></td>
+
+
+                <tr id="@i" style="display:none; background-color:lightblue; ">
+                    <td><a target="_blank"  href="@item.Url"><img class="Images" src="@item.Image" /></a></td>
                     <td class="Text"><a target="_blank" href="@item.Url">@item.Title</a></td>
                     <td class="Text">@item.Published</td>
                 </tr>

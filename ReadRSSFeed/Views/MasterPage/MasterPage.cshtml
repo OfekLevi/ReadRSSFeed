@@ -1,0 +1,42 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <link href="~/Styles/Css.css" rel="stylesheet" />
+</head>
+<body>
+
+    <div >
+        <header class="NavigationHeader">
+            
+            <ul class="Nav">
+                <li class="Category" style="padding-top:0px"><img class="Icon" src="~/Content/IMGS/v5.png" /></li>
+                <li class="Category"><a class="a">Home</a></li>
+                <li class="Category"><a class="a">About Us</a></li>
+                <li class="Category"><a class="a">Gallery</a></li>
+                <li class="Category"><a class="a">Lane Selector</a></li>
+                <li class="Category"><a class="a">Contact Us</a></li>
+                <li class="Category"><a href="https://localhost:44323" class="a" >News</a></li>
+                <li class="Category"style="padding-left:55%" ><img class="Icon" src="~/Content/IMGS/Icon.jpg" /></li>
+                <li class="Category"><a href="https://localhost:44323/Login/Login" class="a">Login</a></li>
+            </ul>
+        </header>
+        <main>
+            @RenderBody()
+        </main>
+        <footer>
+        </footer>
+
+
+
+
+    </div>
+</body>
+</html>
